@@ -1,0 +1,82 @@
+body {
+    background-color:lightblue;
+    margin:0;
+    padding:0;
+
+}
+
+.parentMenuDiv {
+    display:inline-block;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+}
+
+.menuContainer {
+    margin:0;
+    padding:0;
+
+}
+
+.menuUL {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.menuLI {
+    cursor:pointer;
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:0;
+    background-color:lightgray;
+}
+
+.menuLI:hover {
+    background-color:lightgreen;
+}
+
+.menuLiSelected {
+    background-color:lightgreen;
+}
+
+.topNavMenuBar {
+    margin:0;
+    padding:0;
+}
+
+.topNavMenuBarUL {
+    margin:0;
+    padding:0;
+
+}
+
+.topNavMenuBarLI {
+    display: inline;
+
+}
+
+.topNavMenuBarButton{
+    display: inline-block;
+    padding: 15px;
+    background-color: lightgreen;
+    cursor:pointer;
+}
+
+.topNavMenuBarButton:hover {
+    background-color: darkgreen;
+    color:white;
+}
+
+.albumSongImage {
+    width:100%;
+    height:936px;
+    margin:0;
+    padding:0;
+    border:0;
+    vertical-align: middle;
+}

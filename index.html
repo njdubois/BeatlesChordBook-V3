@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html ng-app="myApp">
+	<head>
+		<title>Album Book</title>
+	</head>
+
+	<body ng-controller="AlbumListController">
+
+		<div class="parentMenuDiv" ng-show="showMenu === true">
+
+			<div
+				class="menuContainer"
+				ng-show="currentAlbum == ''"
+			>
+
+				<ul class="menuUL">
+
+					<li
+						ng-repeat="(key, album) in albums"
+						class="menuLI"
+						ng-click="showAlbumSongList(key)"
+					>
+						{{ key }}
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div
+				class="menuContainer"
+				ng-show="currentAlbum != ''"
+			>
+
+				<ul class="menuUL">
+
+					<li class="menuLI" ng-click="closeAlbum()">
+						Go Back
+					</li>
+					<li
+						ng-repeat="(songKey, song) in currentAlbum.trackList"
+						class="menuLI"
+						ng-click="selectSong(songKey)"
+
+					>
+						{{ song.trackTitle }}
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+
+
+		<div
+			ng-show="showMenu === false"
+		>
+			<div
+				class="topNavMenuBar"
+			>
+				<ul class="topNavMenuBarUL">
+					<li class="topNavMenuBarLI">
+						<div class="topNavMenuBarButton" ng-click="showMenu=true">
+							Album List
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<img
+				ng-repeat="(trackKey, trackFileName) in currentSong.trackPageDetails"
+				src="songImages/{{trackFileName}}.jpg"
+				class="albumSongImage"
+			/>
+
+
+		</div>
+
+
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/trackDetailsJson.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+</html>
